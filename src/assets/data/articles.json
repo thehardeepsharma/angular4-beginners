@@ -1,0 +1,20 @@
+[
+	{
+		"id": 1,
+		"author": "Hardeep",
+		"title": "First Article",
+		"content": "This is my First Article"
+	},
+	{
+		"id": 2,
+		"author": "Rupak",
+		"title": "Second Article",
+		"content": "This is Second Article"
+	},
+	{
+		"id": 3,
+		"author": "Hardeep",
+		"title": "Third Article",
+		"content": "This is Third Article"
+	}
+]
