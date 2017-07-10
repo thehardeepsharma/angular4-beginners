@@ -10,13 +10,15 @@ import { ArticleService } from './article.service';
 import { ArticleComponent } from './article/article.component';
 import { UsersComponent } from './users/users.component';
 import { AnimationComponent } from './animation/animation.component';
+import { BaseconvertorComponent } from './baseconvertor/baseconvertor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ArticleComponent,
     UsersComponent,
-    AnimationComponent
+    AnimationComponent,
+    BaseconvertorComponent
   ],
   imports: [
     BrowserModule,
@@ -36,6 +38,10 @@ import { AnimationComponent } from './animation/animation.component';
 		{
 			path: 'animation',
 			component: AnimationComponent
+		},
+		{
+			path: 'baseconvertor',
+			component: BaseconvertorComponent
 		},
     ])
   ],
