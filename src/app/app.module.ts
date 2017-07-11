@@ -4,6 +4,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ArticleService } from './article.service';
@@ -11,6 +12,7 @@ import { ArticleComponent } from './article/article.component';
 import { UsersComponent } from './users/users.component';
 import { AnimationComponent } from './animation/animation.component';
 import { BaseconvertorComponent } from './baseconvertor/baseconvertor.component';
+import { BookappComponent } from './bookapp/bookapp.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { BaseconvertorComponent } from './baseconvertor/baseconvertor.component'
     ArticleComponent,
     UsersComponent,
     AnimationComponent,
-    BaseconvertorComponent
+    BaseconvertorComponent,
+    BookappComponent
   ],
   imports: [
     BrowserModule,
+	FormsModule,
     ReactiveFormsModule,
     HttpModule,
 	JsonpModule,
@@ -30,7 +34,7 @@ import { BaseconvertorComponent } from './baseconvertor/baseconvertor.component'
     	{
 			path: 'articles',
 			component: ArticleComponent
-		},    
+		},
 		{
 			path: 'users',
 			component: UsersComponent
@@ -42,6 +46,10 @@ import { BaseconvertorComponent } from './baseconvertor/baseconvertor.component'
 		{
 			path: 'baseconvertor',
 			component: BaseconvertorComponent
+		},		
+		{
+			path: 'bookapp',
+			component: BookappComponent
 		},
     ])
   ],
