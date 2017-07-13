@@ -8,11 +8,13 @@ import { FormsModule }   from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { ArticleService } from './article.service';
+import { HeroService } from './hero.service';
 import { ArticleComponent } from './article/article.component';
 import { UsersComponent } from './users/users.component';
 import { AnimationComponent } from './animation/animation.component';
 import { BaseconvertorComponent } from './baseconvertor/baseconvertor.component';
 import { BookappComponent } from './bookapp/bookapp.component';
+import { HeroComponent } from './hero/hero.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,8 @@ import { BookappComponent } from './bookapp/bookapp.component';
     UsersComponent,
     AnimationComponent,
     BaseconvertorComponent,
-    BookappComponent
+    BookappComponent,
+    HeroComponent
   ],
   imports: [
     BrowserModule,
@@ -51,9 +54,13 @@ import { BookappComponent } from './bookapp/bookapp.component';
 			path: 'bookapp',
 			component: BookappComponent
 		},
+		{
+			path: 'hero',
+			component: HeroComponent
+		},
     ])
   ],
-  providers: [ArticleService],
+  providers: [ArticleService,HeroService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
