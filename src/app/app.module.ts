@@ -5,6 +5,7 @@ import { HttpModule, JsonpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule }   from '@angular/forms';
+import { DataTableModule } from 'angular-4-data-table';
 
 import { AppComponent } from './app.component';
 import { ArticleService } from './article.service';
@@ -15,6 +16,12 @@ import { AnimationComponent } from './animation/animation.component';
 import { BaseconvertorComponent } from './baseconvertor/baseconvertor.component';
 import { BookappComponent } from './bookapp/bookapp.component';
 import { HeroComponent } from './hero/hero.component';
+import { HeroDetailsComponent } from './hero/hero-details/hero-details.component';
+import { HomeComponent } from './home/home.component';
+import { ChildComponent } from './child/child.component';
+
+import { LoginModule } from './login/login.module';
+import { DatatableComponent } from './datatable/datatable.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +31,11 @@ import { HeroComponent } from './hero/hero.component';
     AnimationComponent,
     BaseconvertorComponent,
     BookappComponent,
-    HeroComponent
+    HeroComponent,
+    HeroDetailsComponent,
+    HomeComponent,
+    ChildComponent,
+    DatatableComponent
   ],
   imports: [
     BrowserModule,
@@ -33,8 +44,14 @@ import { HeroComponent } from './hero/hero.component';
     HttpModule,
 	JsonpModule,
 	BrowserAnimationsModule,
+	LoginModule,
+	DataTableModule,
     RouterModule.forRoot([
     	{
+			path: 'home',
+			component: HomeComponent
+		},
+		{
 			path: 'articles',
 			component: ArticleComponent
 		},
@@ -57,6 +74,14 @@ import { HeroComponent } from './hero/hero.component';
 		{
 			path: 'hero',
 			component: HeroComponent
+		},
+		{
+			path: 'child',
+			component: ChildComponent
+		},
+		{
+			path: 'datatable',
+			component: DatatableComponent
 		},
     ])
   ],

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ArticleService } from './article.service';
 
 @Component({
@@ -9,7 +9,7 @@ import { ArticleService } from './article.service';
 
 export class AppComponent implements OnInit {
 
-  	constructor(private newService: ArticleService) { }
+	constructor(private newService: ArticleService) { }
 
   	title = 'app';
 	
