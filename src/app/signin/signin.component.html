@@ -1,0 +1,17 @@
+<h1>Angular 4: Sign In Form</h1>
+<form [formGroup]="signinForm" (ngSubmit)="onSubmit(signinForm.value)" novalidate>
+  <p> Is "signinForm" valid? {{signinForm.valid}} </p>
+
+  <div>
+    <label>Username</label>
+    <input type="text" name="name" formControlName="username">
+  </div>
+  <br>
+  <div>
+    <label>Password</label>
+    <input type="text" formControlName="password">
+  </div>
+  
+  <pre>{{signinForm.value | json}}</pre>
+  <button type="submit" [disabled]="signinForm.invalid || signinForm.pending">Login</button>
+</form>
