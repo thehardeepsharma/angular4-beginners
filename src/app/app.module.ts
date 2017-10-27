@@ -19,6 +19,7 @@ import { HeroComponent } from './hero/hero.component';
 import { HeroDetailsComponent } from './hero/hero-details/hero-details.component';
 import { HomeComponent } from './home/home.component';
 import { ChildComponent } from './child/child.component';
+import { SigninComponent } from './signin/signin.component';
 
 import { LoginModule } from './login/login.module';
 import { DatatableComponent } from './datatable/datatable.component';
@@ -35,7 +36,8 @@ import { DatatableComponent } from './datatable/datatable.component';
     HeroDetailsComponent,
     HomeComponent,
     ChildComponent,
-    DatatableComponent
+	DatatableComponent,
+	SigninComponent
   ],
   imports: [
     BrowserModule,
@@ -82,6 +84,10 @@ import { DatatableComponent } from './datatable/datatable.component';
 		{
 			path: 'datatable',
 			component: DatatableComponent
+		},
+		{
+			path: 'signin',
+			component: SigninComponent
 		},
     ])
   ],
