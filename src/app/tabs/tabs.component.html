@@ -1,0 +1,21 @@
+<div class="container">
+  <h3>Tabs</h3>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#Home" aria-controls="Home" role="tab" data-toggle="tab">Home</a></li>
+    <li><a href="#Articles" aria-controls="Articles" role="tab" data-toggle="tab">Articles</a></li>
+    <li><a href="#Bookapp" aria-controls="Bookapp" role="tab" data-toggle="tab">Bookapp</a></li>
+    <li><a href="#Baseconvertor" aria-controls="Baseconvertor" role="tab" data-toggle="tab">Baseconvertor</a></li>
+    <li><a href="#Models" aria-controls="Models" role="tab" data-toggle="tab">Models</a></li>
+  </ul>
+  <br>
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane" id="Articles"><app-article></app-article></div>
+    <div role="tabpanel" class="tab-pane" id="Bookapp"><app-bookapp></app-bookapp></div>
+    <div role="tabpanel" class="tab-pane" id="Baseconvertor"><app-baseconvertor></app-baseconvertor></div>
+    <div role="tabpanel" class="tab-pane active" id="Home"><strong>Note:</strong> This example shows how to create a basic navigation tab. It is not toggleable/dynamic yet (you can't click on the links to display different content)- see the last example in the Bootstrap Tabs and Pills Tutorial to find out how this can be done.</div>
+    <div role="tabpanel" class="tab-pane" id="Models">
+      Models
+      <button class="btn btn-default" (click)=showConfirm()>Show confirm</button>
+    </div>
+  </div>
+</div>

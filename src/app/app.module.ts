@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule }   from '@angular/forms';
 import { DataTableModule } from 'angular-4-data-table';
+import { BootstrapModalModule } from 'ng2-bootstrap-modal';
 
 import { AppComponent } from './app.component';
 import { ArticleService } from './article.service';
@@ -21,8 +22,10 @@ import { HomeComponent } from './home/home.component';
 import { ChildComponent } from './child/child.component';
 import { SigninComponent } from './signin/signin.component';
 
-import { LoginModule } from './login/login.module';
 import { DatatableComponent } from './datatable/datatable.component';
+import { ConfirmComponent } from './shared/components/confirm/confirm.component';
+import { TabsComponent } from './tabs/tabs.component';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +40,12 @@ import { DatatableComponent } from './datatable/datatable.component';
     HomeComponent,
     ChildComponent,
 	DatatableComponent,
-	SigninComponent
+	SigninComponent,
+	ConfirmComponent,
+	TabsComponent	
+  ],
+  entryComponents: [
+	ConfirmComponent
   ],
   imports: [
     BrowserModule,
@@ -46,8 +54,8 @@ import { DatatableComponent } from './datatable/datatable.component';
     HttpModule,
 	JsonpModule,
 	BrowserAnimationsModule,
-	LoginModule,
 	DataTableModule,
+	BootstrapModalModule.forRoot({container:document.body}),
     RouterModule.forRoot([
     	{
 			path: 'home',
@@ -88,6 +96,10 @@ import { DatatableComponent } from './datatable/datatable.component';
 		{
 			path: 'signin',
 			component: SigninComponent
+		},
+		{
+			path: 'tabs',
+			component: TabsComponent
 		},
     ])
   ],
