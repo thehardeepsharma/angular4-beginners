@@ -37,5 +37,9 @@ export class SigninComponent implements OnInit {
     );
 
   }
+  
+  getUserList() {
+	  //this.userService.userList();	  
+  }
 
 }

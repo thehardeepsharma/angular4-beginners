@@ -21,11 +21,15 @@ import { HeroDetailsComponent } from './hero/hero-details/hero-details.component
 import { HomeComponent } from './home/home.component';
 import { ChildComponent } from './child/child.component';
 import { SigninComponent } from './signin/signin.component';
+import { ModalComponent } from './modal/modal.component';
 
 import { DatatableComponent } from './datatable/datatable.component';
-import { ConfirmComponent } from './shared/components/confirm/confirm.component';
 import { TabsComponent } from './tabs/tabs.component';
 
+import { AlertComponent } from "./modal/alert.component";
+import { ConfirmComponent } from "./modal/confirm.component";
+import { PromptComponent } from "./modal/prompt.component";
+import { ParentDialogComponent } from "./modal/parent-dialog.component";
 
 @NgModule({
   declarations: [
@@ -41,11 +45,18 @@ import { TabsComponent } from './tabs/tabs.component';
     ChildComponent,
 	DatatableComponent,
 	SigninComponent,
-	ConfirmComponent,
-	TabsComponent	
+	AlertComponent,
+    ConfirmComponent,
+    PromptComponent,
+    ParentDialogComponent,
+	TabsComponent,
+	ModalComponent
   ],
   entryComponents: [
-	ConfirmComponent
+	AlertComponent,
+    ConfirmComponent,
+    PromptComponent,
+    ParentDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -100,6 +111,10 @@ import { TabsComponent } from './tabs/tabs.component';
 		{
 			path: 'tabs',
 			component: TabsComponent
+		},
+		{
+			path: 'modal',
+			component: ModalComponent
 		},
     ])
   ],
